@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        var bir = 0
         val pastliner = LinearLayout(this)
         val pastparam = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
 
         pastliner.layoutParams = pastparam
 
         val buttonclear = Button(this)
-        val buttonclearparam = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,toInt(100))
+        val buttonclearparam = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,toInt(50))
         buttonclearparam.marginStart = toInt(16)
         buttonclearparam.marginEnd = toInt(16)
         buttonclearparam.bottomMargin = toInt(16)
@@ -95,13 +95,18 @@ class MainActivity : AppCompatActivity() {
 
         buttonclear.setOnClickListener {
             gameliner.removeAllViews()
+            bir = 0
+
         }
         button1.setOnClickListener {
             val startbutton = Button(this)
             val startparam = LinearLayout.LayoutParams(toInt(120),toInt(50))
 
+            bir++
+            startbutton.setText(bir.toString())
             startparam.gravity = Gravity.START
             setcolor(startbutton)
+
             startparam.setMargins(toInt(8),toInt(8),toInt(8),toInt(8))
             startbutton.layoutParams = startparam
             gameliner.addView(startbutton)
@@ -112,12 +117,14 @@ class MainActivity : AppCompatActivity() {
 
         button2.setOnClickListener {
 
+            bir++
             val startbutton = Button(this)
             val startparam = LinearLayout.LayoutParams(toInt(120),toInt(50))
             startparam.gravity = Gravity.CENTER_HORIZONTAL
             startparam.setMargins(toInt(8),toInt(8),toInt(8),toInt(8))
             startbutton.layoutParams = startparam
             setcolor(startbutton)
+            startbutton.setText(bir.toString())
             gameliner.addView(startbutton)
 
 
@@ -128,6 +135,8 @@ class MainActivity : AppCompatActivity() {
             val startbutton = Button(this)
             val startparam = LinearLayout.LayoutParams(toInt(120),toInt(50))
             startparam.gravity = Gravity.END
+            bir++
+            startbutton.setText(bir.toString())
             startparam.setMargins(toInt(8),toInt(8),toInt(8),toInt(8))
             setcolor(startbutton)
             startbutton.layoutParams = startparam
