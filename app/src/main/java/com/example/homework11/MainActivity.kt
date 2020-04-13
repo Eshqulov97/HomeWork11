@@ -54,14 +54,14 @@ class MainActivity : AppCompatActivity() {
         button1param.setMargins(toInt(8),toInt(8),toInt(8),toInt(16))
         button1.setBackgroundResource(R.drawable.buttonstylee)
         button1.layoutParams = button1param
-        button1.setText("button s")
+        button1.setText("left")
 
         val button2param = LinearLayout.LayoutParams(toInt(0),toInt(50))
         button2param.weight = 1F
         button2.setBackgroundResource(R.drawable.buttonstylee)
         button2param.setMargins(toInt(8),toInt(8),toInt(8),toInt(16))
         button2.layoutParams = button2param
-        button2.setText("button c")
+        button2.setText("center")
 
         val button3param = LinearLayout.LayoutParams(toInt(0),toInt(50))
         button3param.weight = 1F
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         button3param.setMargins(toInt(16),toInt(8),toInt(8),toInt(8))
         button3.layoutParams = button3param
 
-        button3.setText("button e")
+        button3.setText("right")
         asosiyliner.addView(button1)
         asosiyliner.addView(button2)
         asosiyliner.addView(button3)
